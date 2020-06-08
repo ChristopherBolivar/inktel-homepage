@@ -13,7 +13,7 @@
  */
 
 get_header(); ?>
-<Style>
+<style>
 	@font-face {
   font-family: Trade-Gothic-LT-Bold;
   src: url('<?php echo get_template_directory_uri() ?>/Trade-Gothic-LT-Bold.ttf');
@@ -31,6 +31,7 @@ get_header(); ?>
 	body, p , ul, li {
 		font-family:  Trade-Gothic-LT, sans-serif !important;
 	}
+	.flex {display: flex !important;}
 	/* ----------------------------------- CAROUSEL -----------------------------------*/
 	#carouselExampleIndicators {
 		height: 600px
@@ -43,7 +44,7 @@ get_header(); ?>
 		background-size: cover;
 		height: 600px;
 	}
-	.carousel-btn, .focusarea-btn {
+	.carousel-btn, .focusarea-btn, .green-btn {
 		background: #008161;
 		text-decoration: none;
 		color: #fff;
@@ -51,18 +52,16 @@ get_header(); ?>
 		padding: 1rem;
 		border-radius: 12px;
 	}
-	.carousel-btn:hover, .focusarea-btn:hover {
+	.carousel-btn:hover, .focusarea-btn:hover, .green-btn:hover {
 		text-decoration: none;
 		color: #fff;
 	}
 	.carousel-item {
 		position: relative;
 	}
-	.carousel-item div{
-		position: absolute;
-		top: 25%;
-		bottom: 25%;
-		left: 10%;
+	.carousel-item div{ 
+		align-self: center;
+		margin-left: 10%;
 	}
 	.carousel-item h1 {
 		font-size: 6rem;
@@ -93,7 +92,9 @@ get_header(); ?>
 	#focus-areas {
 		text-align: center;
 		padding: 5rem;
-		margin-bottom: 2rem;
+		background: url('https://www.inktel.com/wp-content/themes/inktel/images/homepage/corporate-1.png') ;
+		background-size: cover;
+		background-position: top;
 	}
 	#focus-area-boxes {
 		justify-content: center ; 
@@ -111,20 +112,147 @@ get_header(); ?>
 	.focusarea-btn{
 		font-size: 2rem;
 	}
+	.cpg {
+		font-size: 1.8rem !important;
+		line-height: 1.8rem;
+	}
+	/* ----------------------------------- CULTURE -----------------------------------*/
 	#culture {
 		padding: 0 !important;
-		margin-top: 2rem;
 	}
 	
 	#culture .left-col {
 		background-image: url('<?php echo get_template_directory_uri() ?>/images/homepage/culture.png');
-		height: 100%;
+		padding: 25rem;
+		background-position: top center;
+		background-size: cover;
+
+		height: 600px;
 	}
 	.culture-blurp {
+		height: 600px;
+		padding: 5rem 15rem !important;
+		color: #fff;
+		background: rgb(0,36,93);
+		align-self:center;
+	    background: linear-gradient(0deg, rgba(0,36,93,1) 0%, rgba(0,129,97,1) 80%);
+	}
+	.culture-blurp p{
+		font-size: 2.2rem;
+		margin-top: 3rem;
+
+		margin-bottom: 3.5rem; 
+	}
+	.culture-blurp h2{
+		font-size: 6rem;
+		text-transform: uppercase;
+	}
+	.culture-btn {
+		font-size: 2.5rem;
+	}
+	.culture-blurp div {
+		align-self: center;
+	}
+
+	/* ----------------------------------- IG Slider -----------------------------------*/
+	#instagram-wrapper {
+		background: url('https://www.inktel.com/wp-content/themes/inktel/images/homepage/corporate-1.png') ;
+		background-size: cover;
+		background-position: bottom;
 		padding: 5rem;
 	}
-	
-</Style>
+
+	/* ----------------------------------- FOOTER -----------------------------------*/
+
+	#footer-wrapper {
+		background-color: #00245D !important;
+		color: #fff !important;
+		margin-top: 0 !important;
+	}
+	.footer-menu ul li a, a span, .social-media ul li a {
+		color: #fff !important;
+	}
+	.footer-menu {
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+	}
+
+	/* ----------------------------------- RESPONSIVE -----------------------------------*/
+	@media screen and (max-width: 1280px){
+		.culture-blurp {
+			padding: 5rem 10rem !important;
+		}
+	}
+	@media screen and (max-width: 800px){
+		.focus-area-tab {
+			font-size: 1rem;
+			padding: .5rem;
+		}
+		.cpg{
+			font-size: 1rem !important;
+			line-height: 1.1em;
+			}
+		#carouselExampleIndicators	{
+			height: 400px !important;
+		}
+		.carousel-item h1 {
+			font-size: 4rem;
+			line-height: 4rem !important;
+		}
+		.carousel-item p, .carousel-btn{
+			font-size: 1.5rem;
+		}
+		#slide-1{
+			background: linear-gradient(90deg, rgba(255,255,255,.9) 60%, rgba(255,255,0,0) 81%),url('https://www.inktel.com/wp-content/themes/inktel/images/homepage/slide1.jpg');
+			height: 400px;
+	}
+		#focus-areas h2{
+			font-size: 2.8rem;
+
+	}
+		#focus-areas p{
+			font-size: 1.3rem;
+		}
+		.focusarea-btn {
+			font-size: 1.3rem;
+		}
+		#culture .left-col, .culture-blurp  {
+			padding: 5rem;
+			height: 400px;
+}
+		.culture-blurp {
+			padding: 2rem 5rem !important;
+}
+		.culture-blurp p {
+			font-size: 1.5rem;
+			margin-top: 1rem;
+			margin-bottom: 2.5rem;
+		}
+		.culture-blurp h2 {
+			font-size: 4rem;
+		}
+		.culture-btn{
+			font-size: 1.5rem;
+		}
+		
+	}
+	@media screen and (max-width: 500px){
+		#focus-areas p {
+			font-size: .8rem;
+		}
+		.focus-area-tab{
+			margin-top: 1rem;
+			padding: .5rem !important;
+		}
+		.cpg {
+
+			padding: 1rem !important;
+		}
+		.focus-area-tab, .cpg {
+			font-size: 1.8rem !important;
+		}
+	}
+</style>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 
@@ -137,7 +265,7 @@ get_header(); ?>
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
   </ol>
   <div class="carousel-inner">
-	    <div id="slide-1" class="carousel-item active">
+	    <div id="slide-1" class="carousel-item active flex">
 		<div>
 		<h1>
 		  We build<br> world-class <br>customer service
@@ -167,23 +295,23 @@ get_header(); ?>
 world-class customer service for brands across the following verticals</p>
 	
 	<div id="focus-area-boxes" class="row">
-		<div class="col-2">
+		<div class="col-12 col-sm-4 col-md-2">
 			 <div class="focus-area-tab">Retail/ECOM</div>
 			<div><img class="d-block w-100" src="https://via.placeholder.com/150" alt="Third slide"></div>
 		</div>
-		<div class="col-2">
+		<div class="col-12 col-sm-4 col-md-2">
 			 <div class="focus-area-tab">Government</div>
 			<div><img class="d-block w-100" src="https://via.placeholder.com/150" alt="Third slide"></div>
 		</div>
-		<div class="col-2">
-			 <div style="font-size: 1.8rem !important" class="focus-area-tab">Consumer Packaged Goods</div>
+		<div class="col-12 col-sm-4 col-md-2">
+			 <div class="focus-area-tab cpg">Consumer Packaged Goods</div>
 			<div><img class="d-block w-100" src="https://via.placeholder.com/150" alt="Third slide"></div>
 		</div>
-		<div class="col-2">
+		<div class="col-12 col-sm-4 col-md-2">
 			 <div class="focus-area-tab">Restaurant</div>
 			<div><img class="d-block w-100" src="https://via.placeholder.com/150" alt="Third slide"></div>
 		</div>
-		<div class="col-2">
+		<div class="col-12 col-sm-4 col-md-2">
 			 <div class="focus-area-tab">education</div>
 			<div><img class="d-block w-100" src="https://via.placeholder.com/150" alt="Third slide"></div>
 		</div>
@@ -197,14 +325,16 @@ world-class customer service for brands across the following verticals</p>
 		<div class="left-col col-sm-6">
 			 &nbsp;
 		</div>
-		<div class="culture-blurp col-sm-6">
+		<div class="culture-blurp col-sm-6 flex">
+			<div>
 			<h2>Culture</h2>
 			<p>Inktel has long been built upon the concept that "you can't build a great company without great talent." Our award-winning Human Capital Team is driven by our mission to hire the right people, provide the right training, the right leadership, the right toolset, and the right motivation to achieve the right performance. It's what makes us who we are. Inktel is Where Talent Lives™!
 </p>
-			<a href="#">
+			<a class="green-btn culture-btn" href="#">
 			Explore our culture
 			</a>
 		</div>
+			</div>
 	</div>
 	
 
